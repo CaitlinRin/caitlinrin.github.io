@@ -31,21 +31,44 @@
                 <div class="my-col"> 
 					<h3 class="greet-heading blue-text">University Projects</h3> 
                     <div class="my-card port-card"> 
+					<!-- Image slideshow section -->
+					<div class = "mySlides">
                         <div class="image"> 
-						<div class = "uniprojectsgif" id = "uniprojgif">
-                            <img src="UniProjectsTemp.gif"
+						<a href = "uniproj.html">
+                            <img src="postMortem.png"
                                 alt="Web Design Image"> 
-						</div>
-                        </div>                      
-                    </div> 
-                </div> 
+						</a>
+                        </div> 
+					</div>	
+
+					<div class = "mySlides">
+                        <div class="image"> 
+						<a href = "uniproj.html">
+                            <img src="wager.png"
+                                alt="Web Design Image"> 
+						</a>
+                        </div> 
+						</div>	
+					
+					<div class = "mySlides">
+                        <div class="image"> 
+						<a href = "uniproj.html">
+                            <img src="submersionPic.png"
+                                alt="Web Design Image"> 
+						</a>
+                        </div> 
+					</div>
+					</div>
+                </div> 					
                 <div class="my-col"> 
 					<h3 class="greet-heading blue-text">Game Jams</h3> 
 					<div class="my-card port-card"> 
 						<div class="image"> 
-							<img src="./Images/designImage2.avif"
-								alt="Web Design Image"> 
-						</div>                      
+						<a href = "gamejams.html">
+							<img src = "UniProjectsTemp.gif" 
+								alt="Game Jam GIF"> 
+						</a>
+						</div>                      						
 					</div> 
                 </div>
 				<div class="my-col"> 
@@ -67,25 +90,29 @@
 </section>
 
 <section>
-    <h2>Projects</h2>
-    <div class="projects">
-        <div class="card">
-            <h3>Post Mortem</h3>
-            <p>Proffesional Project created during my 3rd year of University</p>
-            <a href="#">View on GitHub</a>
-        </div>
-        <div class="card">
-            <h3>Wager of the Wolf</h3>
-            <p>Group project created during my 2nd year of University using PS5 console</p>
-            <a href="#">View on GitHub</a>
-        </div>
-    </div>
-</section>
-
-<section>
     <h2>Contact</h2>
     <p>Email: <a href="mailto:caitlinmonica@gmail.com">caitlinmonica@gmail.com</a></p>
 </section>
+
+<script>
+	let slideIndex = 1;
+	showSlides();
+	
+	function showSlides(){
+	let i;
+	let slides = document.getElementByClassName("mySlides");
+	for(i = 0; i < slides.lentgh; i++)
+	{
+		slides[i].style.display = "none";
+	}
+	slideIndex++;
+	if (slideIndex > slides.length) {slideIndex = 1}
+	slides[slideIndex-1].style.display = "block";
+	setTimeout(showSlides, 2000); //Change img every 2 secs
+	}
+</script>
+	
+</body>
 
 <footer>
     <p>© 2026 Caitlin Monica Rintoul</p>

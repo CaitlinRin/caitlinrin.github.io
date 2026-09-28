@@ -5,6 +5,17 @@ body {
 	box-sizing: border-box;
 	font-family: 'Poppins', sans-serif;
 }
+
+.hero {
+	align-content: center;
+	align-content:center;
+}
+
+.headings .intro-heading{
+	text-align: center;
+	margin-top: 5rem;
+}
+
 .intro-heading {
 	text-align: center;
 }
@@ -62,6 +73,12 @@ body {
 	margin: 4.8rem 0;
 	padding: 0 5rem;
 	}
+	
+.portfolio-content {
+	background-color: rgba(0, 0, 0, 0.1); 
+	margin-top: 5rem;
+	margin-bottom: 5rem;
+}
 
 .port-card{
 	padding: 0 !important;
@@ -83,6 +100,24 @@ body {
 	border-bottom-left-radius: 20px;
 }
 
+.port-card .image:hover {
+	
+}
+
+.mySlides {
+	display: none;
+}
+
+.fade {
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+@keyframes fade {
+	from {opacity: .4}
+	to {opacity:1}
+}
+
 .my-row { 
     display: flex; 
     align-items: center; 
@@ -92,8 +127,23 @@ body {
 
 .my-row .my-col { 
     text-align: center; 
+    align-items: center;
     width: 30%; 
 } 
+
+.my-col-middle {
+	align-content: center; 
+    justify-content: space-between; 
+	padding-left: 15%;
+	padding-right: 15%;
+     
+}
+
+.my-col-middle .my-row-middle {
+	 text-align: center; 
+    align-items: center;
+    height: 30%; 
+}
 
 .my-card { 
     text-align: center; 
