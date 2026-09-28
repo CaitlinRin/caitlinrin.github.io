@@ -30,30 +30,30 @@
             <div class="my-row"> 
                 <div class="my-col"> 
 					<h3 class="greet-heading blue-text">University Projects</h3> 
-                    <div class="my-card port-card"> 
+                    <div class="my-card port-card" onmouseenter = "startSlides()" onmouseleave = "stopSlides()"> 
 					<!-- Image slideshow section -->
-					<div class = "mySlides">
+					<div class = "mySlides fade">
                         <div class="image"> 
 						<a href = "uniproj.html">
-                            <img src="postMortem.png"
+                            <img src="postMortem.png" style = "width:100%" style = "height:100%"
                                 alt="Web Design Image"> 
 						</a>
                         </div> 
 					</div>	
 
-					<div class = "mySlides">
+					<div class = "mySlides fade">
                         <div class="image"> 
 						<a href = "uniproj.html">
-                            <img src="wager.png"
+                            <img src="wager.png" style = "width:100%"
                                 alt="Web Design Image"> 
 						</a>
                         </div> 
 						</div>	
 					
-					<div class = "mySlides">
+					<div class = "mySlides fade">
                         <div class="image"> 
 						<a href = "uniproj.html">
-                            <img src="submersionPic.png"
+                            <img src="submersionPic.png" style = "width:100%"
                                 alt="Web Design Image"> 
 						</a>
                         </div> 
@@ -95,20 +95,48 @@
 </section>
 
 <script>
-	let slideIndex = 1;
-	showSlides();
+	let slideIndex = 0;
+	stopSlides();
+	startSlides();
+	let slideshow = document.getElementsByClassName("mySlides");
+	//slideshow.addEventListener("mouseover", startSlides);
+	//slideshow.addEventListener("mouseout", stopSlides);
 	
-	function showSlides(){
-	let i;
-	let slides = document.getElementByClassName("mySlides");
-	for(i = 0; i < slides.lentgh; i++)
+	//slideshow.onmouseover = startSlides();
+	//slideshow.onmouseout = stopSlides();
+	
+	var stop = true;
+
+	function showSlides() {
+	if(stop == false)
 	{
+	let i = 0;
+	let slides = document.getElementsByClassName("mySlides");
+	for (i = 0; i < slides.length; i++) {
 		slides[i].style.display = "none";
 	}
 	slideIndex++;
 	if (slideIndex > slides.length) {slideIndex = 1}
 	slides[slideIndex-1].style.display = "block";
-	setTimeout(showSlides, 2000); //Change img every 2 secs
+	
+		setTimeout(showSlides, 2000); // Change image every 2 seconds
+	}
+	}
+	
+	function stopSlides() {
+		let slides = document.getElementsByClassName("mySlides");	
+		let i = 0;
+		for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";
+		}
+		slides[0].style.display = "block";
+		stop = true;
+	}
+	
+	function startSlides() {
+		stop = false;
+		//slides[0].style.display = "none";
+		showSlides();
 	}
 </script>
 	
