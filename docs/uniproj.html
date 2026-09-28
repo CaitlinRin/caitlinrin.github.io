@@ -43,10 +43,12 @@
 	
 	<!-- Project section -->
 	<section id= "uni-projects" class = "hero">
-		<div class = "portfolio-content">
+		<div class = "sub-heading"> Group Projects </div>
+	
+		<div class = "portfolio-content" onmouseenter = "expandContent()" onmouseleave = "minimiseContent()">
 			<div class = "my-col-middle">
 				<div class = "my-row-middle"> 
-				<h3 class="subheadings">Post Mortem</h3> 
+				<h3 class="subheadings">Post Mortem | 2026</h3> 
                     <div class="my-card port-card"> 
                         <div class="image"> 
                             <img src="./Images/designImage2.avif"
@@ -54,13 +56,20 @@
                         </div>						
                     </div>					
 						<p>Professional Project created using Unreal Engine as part of a mixed discipline group.</p>
+				<div class = "extra-content" style = "display:none">
+					<p> Post Mortem is a horror-focused, Metroidvania-inspired game in which you play as a Detective investigating an abandoned mansion, utilising the power of possession to switch between past and present.</p>
+					
+				<div class = "sub-heading"> Locked Door System </div>
+				<p> Locked doors were an essential part of the level design in our game which I implemented the functionality foor.
+				</p>
+				</div>
 				</div>
 			</div>
 		</div>
 		<div class = "portfolio-content">
 			<div class = "my-col-middle">
 				<div class = "my-row-middle"> 
-				<h3 class="subheadings">Wager of the Wolf</h3> 
+				<h3 class="subheadings">Wager of the Wolf | 2025</h3> 
                     <div class="my-card port-card"> 
                         <div class="image"> 
                             <img src="./Images/designImage2.avif"
@@ -74,15 +83,92 @@
 		<div class = "portfolio-content">
 			<div class = "my-col-middle">
 				<div class = "my-row-middle"> 
-				<h3 class="subheadings">Submersion</h3> 
+				<h3 class="subheadings">Submersion | 2024</h3> 
                     <div class="my-card port-card"> 
                         <div class="image"> 
                             <img src="./Images/designImage2.avif"
                                 alt="Web Design Image"> 
                         </div>                      
                     </div>				
-						<p>SFML group project created during y 1st year of University. </p>
+						<p>SFML group project created during my 1st year of University. </p>
 				</div>
 			</div>
 		</div>
+		
+		<div class = "sub-heading"> Solo Projects </div>
+		
+		<div class = "portfolio-content">
+			<div class = "my-col-middle">
+				<div class = "my-row-middle"> 
+				<h3 class="subheadings">Graphics Programming with Shaders | 2025</h3> 
+                    <div class="my-card port-card"> 
+                        <div class="image"> 
+                            <img src="./Images/designImage2.avif"
+                                alt="Web Design Image"> 
+                        </div>                      
+                    </div>				
+						<p>A scene created using DirectX11. </p>
+				</div>
+			</div>
+		</div>
+		<div class = "portfolio-content">
+			<div class = "my-col-middle">
+				<div class = "my-row-middle"> 
+				<h3 class="subheadings">Gameplay Mechanics Development | 2025</h3> 
+                    <div class="my-card port-card"> 
+                        <div class="image"> 
+                            <img src="./Images/designImage2.avif"
+                                alt="Web Design Image"> 
+                        </div>                      
+                    </div>				
+						<p>Unreal Engine project focused on developing a mechanic in purely C++. </p>
+				</div>
+			</div>
+		</div>
+		
+		<div class = "portfolio-content">
+			<div class = "my-col-middle">
+				<div class = "my-row-middle"> 
+				<h3 class="subheadings">Artificial Intelligence | 2025</h3> 
+                    <div class="my-card port-card"> 
+                        <div class="image"> 
+                            <img src="./Images/designImage2.avif"
+                                alt="Web Design Image"> 
+                        </div>                      
+                    </div>				
+						<p>Self-driving race car controlled by fuzzy logic. </p>
+				</div>
+			</div>
+		</div>
+		
+		<div class = "portfolio-content">
+			<div class = "my-col-middle">
+				<div class = "my-row-middle"> 
+				<h3 class="subheadings">Graphics Programming | 2024</h3> 
+                    <div class="my-card port-card"> 
+                        <div class="image"> 
+                            <img src="./Images/designImage2.avif"
+                                alt="Web Design Image"> 
+                        </div>                      
+                    </div>				
+						<p>Simple graphics scene created using Skateboard Engine. </p>
+				</div>
+			</div>
+		</div>
+		
+	<script>
+		minimiseContent();
+	
+		function expandContent()
+		{
+			document.getElementsByClassName("extra-content").style.display = "block";
+			
+		}
+		
+		function minimiseContent()
+		{
+			document.getElementsByClassName("extra-content").style.display = "none";
+			
+		}
+	</script>
 </html>

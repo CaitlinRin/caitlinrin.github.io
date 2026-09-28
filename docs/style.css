@@ -40,8 +40,8 @@ body {
 .sub-heading { 
     margin: 0; 
     font-size: 0.8rem; 
-    color: #ccc; 
     font-weight: lighter; 
+	text-align: center;
 } 
 
 .navbar {
